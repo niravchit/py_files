@@ -1,0 +1,14 @@
+<doctype html>
+        <html>
+            <head>
+                <title>{% block title %}Flask Basics{%endblock%}</title>
+                <link rel = 'stylesheet' href="/static/styles.css?version=1">
+            </head>
+            <body>
+                {%block content%}
+                <h1>Hello from {{name}}</h1>
+                {%endblock%}
+                <p>This is a simple app design</p>
+                {%block scripts%} {%endblock%}
+            </body>
+        </html>

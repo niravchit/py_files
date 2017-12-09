@@ -1,0 +1,8 @@
+{% extends 'layout.html'%}
+{%block title%} {{super()}} : Simple App {%endblock%}
+{%block content%}
+    <h1>Hello from {{name}}</h1>
+{%endblock%}
+{%block scripts%}
+    <script src = '/static/scripts.js'></script> <!-- so js alert only shows on index page -->
+{%endblock%}
