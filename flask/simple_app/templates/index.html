@@ -2,7 +2,19 @@
 {%block title%} {{super()}} : Simple App {%endblock%}
 {%block content%}
     <h1>Hello from {{name}}</h1>
+    <div class = 'enter-name'>
+        <div class = 'grid-100'>
+            <img src = '/static/img/apple_stuff.png' class = 'apple'/>
+        </div>
+        <div class = 'grid-100'>
+            <form action = "{{ url_for('save') }}" method = 'POST'> <!-- look for url for method called save -->
+                <label> Favorite Apple Product</label>
+                <input type = "text" name = "name" value = "" autofocus>
+                <input type = "submit" value = "Let's Name It">
+            </form>
+        </div>
+    </div>
 {%endblock%}
 {%block scripts%}
-    <script src = '/static/scripts.js'></script> <!-- so js alert only shows on index page -->
+    <!--<script src = '/static/scripts.js'></script>  so js alert only shows on index page -->
 {%endblock%}

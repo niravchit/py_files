@@ -1,4 +1,4 @@
-from flask import Flask, request, render_template
+from flask import Flask, request, render_template, redirect, request
 
 
 app = Flask(__name__) #use current namespace i.e. refer to yourself
@@ -13,5 +13,9 @@ def index(name = 'Nirav'):
 def add(num1, num2):
     context = {'num1':num1, 'num2':num2} #key value pairings tying variables in view to those in html template
     return render_template('add.html', **context) #pass template name, plus key:value associations for variables
+
+@app.route('/save', methods = ['POST']) #only accessible with POST methods
+def save():
+    return redirect('index.html')
 
 app.run(host = '127.0.0.1', port = 5000, debug=True)
