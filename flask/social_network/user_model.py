@@ -1,5 +1,5 @@
 from peewee import *
-from flask.ext.login import UserMixin
+from flask_login import UserMixin
 import datetime
 
 #database
