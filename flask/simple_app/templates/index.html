@@ -7,9 +7,10 @@
             <img src = '/static/img/apple_stuff.png' class = 'apple'/>
         </div>
         <div class = 'grid-100'>
+            <!-- action on the form (i.e. submit button) will call save method, which redirects to another template view -->
             <form action = "{{ url_for('save') }}" method = 'POST'> <!-- look for url for method called save and only do something when POST -->
                 <label> Favorite Apple Product</label>
-                <!-- get apple product from saves or return empty string -->
+                <!-- get 'apple_product' value from saves or return empty string in input field -->
                 <input type = "text" name = "apple_product" value = "{{ saves.get('apple_product', '') }}" autofocus>
                 <input type = "submit" value = "Let's Name It">
             </form>
